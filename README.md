@@ -1,8 +1,7 @@
-# ml-models
-this repository contains some finely curated machine learning models which very well performs on a given dataset. The dataset used here is again cleaned and preprocessed by me and have good space for data visualization if needed.
 # 🤖 Machine Learning Models Collection
 
-This repository showcases a curated set of machine learning models built using Python, pandas, and scikit-learn. Each model is designed to solve real-world problems with clean workflows, reproducible code, and insightful evaluation metrics.
+This repository showcases a curated set of machine learning models built using Python, pandas, and scikit-learn. Each model is designed to solve real-world problems with clean workflows, reproducible code, and insightful evaluation metric that performs very well on a given dataset. The dataset used here is again cleaned and preprocessed by me and have good space for data visualization if needed.
+# 🤖 Machine Learning Models Collection
 
 ## 📂 What's Inside
 - Supervised learning models: Linear Regression, Decision Trees, Random Forests
