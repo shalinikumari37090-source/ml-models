@@ -79,5 +79,7 @@ To build a robust classification model that can predict the likelihood of a tsun
 - Geographical clustering shows tsunami-prone zones near subduction boundaries (e.g., Pacific Ring of Fire).
 
 ---
-
+> ⚠️ **Disclaimer:**  
+> This tsunami prediction model currently shows 100% accuracy due to the small and simplified dataset used for training and testing. This result does **not** reflect real-world performance. For reliable deployment, the model should be validated on larger, more diverse datasets.
+> 
 ## 📂 Folder Structure
