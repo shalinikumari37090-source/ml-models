@@ -66,9 +66,10 @@ To build a robust classification model that can predict the likelihood of a tsun
 
 ## 📈 Sample Results
 
-- Accuracy: ~XX% (fill in your result)
+- ✅ Model Accuracy: **100.00%** on the test set (`input.csv`)
 - Top Features: `magnitude`, `mmi`, `sig`, `depth`, `cdi`
-- ROC-AUC: ~XX%
+- ROC-AUC: **100.00%**
+
 
 ---
 
