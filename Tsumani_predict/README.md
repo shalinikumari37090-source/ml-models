@@ -1,70 +1,82 @@
-# 🌊 Tsunami Prediction Project
+# 🌍 Earthquake Tsunami Prediction using Random Forest Classifier
 
-## 🔍 Introduction
-Tsunamis are among the most devastating natural disasters, often triggered by undersea earthquakes. This project presents a machine learning pipeline designed to predict the likelihood of a tsunami event based on seismic and oceanographic data. It integrates data preprocessing, feature engineering, model training, and evaluation — all structured for reproducibility and clarity.
+This project uses a Random Forest Classifier to predict whether an earthquake event is likely to trigger a tsunami. The model is trained on a real-world dataset of global earthquakes from 2015 to 2022, with features capturing seismic intensity, location, and geophysical parameters.
 
-## 🎯 Project Goals
-- Build a predictive model for tsunami occurrence using historical seismic data
-- Evaluate model performance using precision, recall, and F1-score
-- Ensure reproducibility through modular code and fixed random seeds
-- Present results in a visually compelling and structured format
+---
 
-## 📦 Dataset Description
-- **Source**: [Insert dataset source or link]
-- **Size**: ~50,000 records spanning multiple decades
-- **Features**:
-  - Earthquake magnitude, depth, latitude, longitude
-  - Event time (UTC), region, oceanic parameters
-- **Target**: Binary label indicating tsunami occurrence (`1 = tsunami`, `0 = no tsunami`)
+## 📁 Dataset Overview
 
-## 🧪 Methodology
+The dataset includes over 300 earthquake records with the following features:
 
-### 1. Data Preprocessing
-- Handle missing values and outliers
-- Normalize continuous features
-- Encode categorical variables (e.g., region)
+| Feature       | Description |
+|---------------|-------------|
+| `magnitude`   | Richter scale magnitude of the earthquake |
+| `cdi`         | Community Internet Intensity Map (perceived shaking) |
+| `mmi`         | Modified Mercalli Intensity (instrumental) |
+| `sig`         | Significance of the event (higher = more significant) |
+| `nst`         | Number of seismic stations that reported the event |
+| `dmin`        | Minimum distance to the nearest station (degrees) |
+| `gap`         | Azimuthal gap between stations (degrees) |
+| `depth`       | Depth of the earthquake (km) |
+| `latitude`    | Latitude of the epicenter |
+| `longitude`   | Longitude of the epicenter |
+| `Year`, `Month` | Temporal features |
+| `tsunami`     | Target variable (1 = tsunami occurred, 0 = no tsunami) |
 
-### 2. Feature Engineering
-- Temporal features: hour, month, season
-- Geospatial clustering: region-based risk zones
-- Derived metrics: energy release, proximity to coast
+---
 
-### 3. Model Training
-- Algorithms used:
-  - Logistic Regression
-  - Random Forest
-  - XGBoost
-- Hyperparameter tuning via GridSearchCV
-- Stratified K-Fold cross-validation
+## 🧠 Objective
 
-### 4. Evaluation Metrics
-- Accuracy, Precision, Recall, F1-score
-- ROC-AUC curve
-- Confusion matrix visualization
+To build a robust classification model that can predict the likelihood of a tsunami based on seismic and geospatial features of an earthquake.
 
-## 📊 Results Summary
+---
 
-| Model              | Accuracy | Precision | Recall | F1-score |
-|--------------------|----------|-----------|--------|----------|
-| Logistic Regression| 0.85     | 0.82      | 0.78   | 0.80     |
-| Random Forest      | 0.88     | 0.85      | 0.83   | 0.84     |
-| XGBoost            | 0.90     | 0.87      | 0.85   | 0.86     |
+## 🛠️ Tools & Libraries
 
-## 📈 Visualizations
-- Seismic activity heatmaps
-- Tsunami frequency by region and season
-- ROC curves and confusion matrices
-- Optional: Power BI dashboard for interactive exploration
+- Python (pandas, scikit-learn, matplotlib, seaborn)
+- Jupyter Notebook / VS Code
+- Random Forest Classifier (`sklearn.ensemble`)
+- GridSearchCV for hyperparameter tuning
+- Power BI / matplotlib for visualizations (optional)
 
-## 🛠️ Technologies Used
-- Python: pandas, NumPy, scikit-learn, matplotlib, seaborn
-- Jupyter Notebook for iterative development
-- Power BI (optional) for dashboard-style presentation
-- Git for version control
+---
 
-## 🚀 How to Run
+## 📊 Workflow
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/yourusername/tsunami-predict
-cd tsunami-predict
+1. **Data Preprocessing**
+   - Handled missing values and outliers
+   - Feature scaling and encoding (if needed)
+   - Feature selection based on correlation and importance
+
+2. **Model Training**
+   - Split data into training and test sets (e.g., 80/20)
+   - Trained Random Forest Classifier
+   - Tuned hyperparameters using GridSearchCV
+
+3. **Evaluation**
+   - Accuracy, Precision, Recall, F1-score
+   - Confusion Matrix and ROC-AUC Curve
+   - Feature importance visualization
+
+4. **Deployment (Optional)**
+   - Saved model using `joblib` or `pickle`
+   - Created an interactive dashboard or API endpoint
+
+---
+
+## 📈 Sample Results
+
+- Accuracy: ~XX% (fill in your result)
+- Top Features: `magnitude`, `mmi`, `sig`, `depth`, `cdi`
+- ROC-AUC: ~XX%
+
+---
+
+## 📌 Key Insights
+
+- Earthquakes with higher magnitude, shallow depth, and high significance are more likely to trigger tsunamis.
+- Geographical clustering shows tsunami-prone zones near subduction boundaries (e.g., Pacific Ring of Fire).
+
+---
+
+## 📂 Folder Structure
